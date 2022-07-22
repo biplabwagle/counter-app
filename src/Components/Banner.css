@@ -1,0 +1,13 @@
+.banner {
+  width: 100%;
+  background-color: teal;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: justify;
+}
+
+.banner__text {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}

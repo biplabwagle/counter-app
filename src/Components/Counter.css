@@ -1,0 +1,8 @@
+.btn {
+  background-color: teal;
+  padding: 5px 25px;
+  margin-left: 10px;
+  border: #fff double;
+  color: #fff;
+  font-size: 1.5rem;
+}

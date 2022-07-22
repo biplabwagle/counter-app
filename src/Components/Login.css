@@ -1,0 +1,28 @@
+.login {
+  background-color: teal;
+  margin-top: 10px;
+}
+
+.login__form {
+  padding: 20px;
+}
+
+.login__form__input {
+  display: block;
+  min-width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.login__form__input::placeholder {
+  font-size: 1rem;
+}
+
+.login__form__button {
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 5px 35px;
+}

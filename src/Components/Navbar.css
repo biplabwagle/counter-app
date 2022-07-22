@@ -1,0 +1,29 @@
+.header__navbar {
+  min-width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__navbar__item {
+  font-size: 1.5rem;
+  display: flex;
+  padding: 0 10px;
+  display: flex;
+  min-width: 25%;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.item__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__navbar__item:hover,
+.header__navbar__item:hover>.item__link {
+  color: aqua;
+}

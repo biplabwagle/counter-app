@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import Header from './Components/Header';
+import Banner from './Components/Banner';
+import Login from './Components/Login';
+import Error from './Components/Error';
+import Protected from './Components/Protected';
+import Counter from './Components/Counter';
 function App() {
+  const { isLoggedIn } = useSelector((store) => store);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Routes>
+        {/* Header */}
+        <Route path="/" element={<Banner />} />
+        {/* login page */}
+        <Route
+          path="/login"
+          element={
+            <>
+              <Login />
+            </>
+          }
+        />
+        {/* Body */}
+        <Route
+          path="/counter"
+          element={
+            <Protected isLoggedIn={isLoggedIn}>
+              <Counter />
+            </Protected>
+          }
+        />
+
+        {/* Error */}
+        <Route path="*" element={<Error />} />
+      </Routes>
     </div>
   );
 }
